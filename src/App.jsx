@@ -1,14 +1,14 @@
-// src/App.jsx
-
-import React from 'react';
+// App.jsx
+import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import './App.css'; // Import global styles
+import AddBook from './components/AddBook'; // We'll create this next
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/add-book" element={<AddBook />} />
+    </Routes>
   );
 }
 
